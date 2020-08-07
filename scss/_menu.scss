@@ -90,7 +90,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: $profile-image;
+      background: $profile-image no-repeat;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -111,19 +111,18 @@
   }
 
   .nav-link {
-    display: inline;
+    display: inline-block;
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    line-height: 1.8;
     font-weight: 500;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
-    &:hover{
-        color:$secondary-color;
+    &:hover {
+      color: $secondary-color;
     }
   }
 }
