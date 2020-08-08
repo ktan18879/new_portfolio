@@ -2,10 +2,12 @@ $primary-color: #444;
 //$primary-color: #fff;
 $secondary-color: #eece1a;
 //$secondary-color: #0a8ec2;
+$bright-text-color: #f4f4f4;
+$dark-text-color: #041669;
 $show-home-image: true;
 $home-image: url("../img/background.jpg");
 $profile-image: url("../img/portrait.jpg");
-$profile-image-small:url("../img/portrait_small.jpg");
+$profile-image-small: url("../img/portrait_small.jpg");
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -30,6 +32,15 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return $dark-text-color;
+  } @else {
+    @return $bright-text-color;
   }
 }
 
